@@ -6,6 +6,7 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		// TODO
+		// liksomforandring
 		throw new UnsupportedOperationException("skrivUt ikke implementert");
 
 	}
