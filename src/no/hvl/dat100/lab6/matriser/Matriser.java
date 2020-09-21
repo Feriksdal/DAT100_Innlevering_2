@@ -4,47 +4,96 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+
+		for (int[] tab : matrise) {
+			for (int verdi : tab) {
+				System.out.print(verdi + ",  ");
+			}
+
+		}
+
+//		throw new UnsupportedOperationException("skrivUt ikke implementert");
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
+		String saman = "";
+
+		for (int[] tab : matrise) {
+			for (int tall : tab) {
+				saman += (tall + " ");
+			}
+			saman += "\n";
+		}
+		return saman;
+//		throw new UnsupportedOperationException("tilStreng ikke implementert");
+
 	}
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
-	
+		int[][] nymatr = new int[matrise.length][];
+
+		for (int i = 0; i < matrise.length; i++) {
+
+			nymatr[i] = new int[matrise[i].length];
+
+			for (int j = 0; j < matrise.length; j++) {
+				nymatr[i][j] = matrise[i][j] * tall;
+
+			}
+
+		}
+		return nymatr;
+//		throw new UnsupportedOperationException("skaler ikke implementert");
+
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
+		boolean lik = true;
+
+		if (a == b) {
+			return lik;
+		} else {
+			return !lik;
+		}
+//		throw new UnsupportedOperationException("erLik ikke implementert");
 	}
-	
+
 	// e)
 	public static int[][] speile(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("speile ikke implementert");
-	
+		int[][] speil = new int[matrise.length][];
+
+		for (int i = 0; i < matrise.length; i++) {
+			speil[i] = new int[matrise[i].length];
+
+			for (int g = 0; g < matrise.length; g++) {
+				speil[i][g] = matrise[g][i];
+			}
+
+		}
+		return speil;
+//		throw new UnsupportedOperationException("speile ikke implementert");
+
 	}
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
-	
+		int[][] mult = new int [b.length][];
+		
+		for (int i = 0; i < b.length; i++) {
+			mult[i]= new int [b[i].length];
+			for (int g = 0; g < b.length; g++) {
+				mult[i][g] = a[i][g]*b[i][g];
+			}
+		}
+		return mult;
+//		throw new UnsupportedOperationException("multipliser ikke implementert");
+
 	}
 }
