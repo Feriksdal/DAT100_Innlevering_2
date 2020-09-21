@@ -55,11 +55,14 @@ public class Matriser {
 
 		boolean lik = true;
 
-		if (a == b) {
-			return lik;
-		} else {
-			return !lik;
+		for (int i = 0; i < b.length; i++) {
+			for (int g = 0; g < b.length; g++) {
+				if (a[i][g] != b[i][g]) {
+					return !lik;
+				}
+			}
 		}
+		return lik;
 //		throw new UnsupportedOperationException("erLik ikke implementert");
 	}
 
