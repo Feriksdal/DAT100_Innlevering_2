@@ -6,8 +6,8 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		System.out.print("Skrivut: (  ");
-		for (int i = 0; i < tabell.length; i++) {
-			System.out.print(tabell[i] + "  ");
+		for (int val : tabell) {
+			System.out.print(val + "  ");
 		}
 		System.out.println(")");
 //		throw new UnsupportedOperationException("skrivUt ikke implementert");

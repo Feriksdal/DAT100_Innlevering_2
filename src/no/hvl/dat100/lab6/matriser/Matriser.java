@@ -7,9 +7,9 @@ public class Matriser {
 
 		for (int[] tab : matrise) {
 			for (int verdi : tab) {
-				System.out.print(verdi + ",  ");
+				System.out.print(verdi + " ");
 			}
-
+			System.out.println();
 		}
 
 //		throw new UnsupportedOperationException("skrivUt ikke implementert");
@@ -87,15 +87,24 @@ public class Matriser {
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
 
-		int[][] mult = new int [b.length][];
-		
+		int[][] c = new int[b.length][];
+
 		for (int i = 0; i < b.length; i++) {
-			mult[i]= new int [b[i].length];
-			for (int g = 0; g < b.length; g++) {
-				mult[i][g] = a[i][g]*b[i][g];
+			c[i] = new int[b[i].length];
+
+			for (int k = 0; k < c.length; k++) {
+
+				int sum = 0;
+				
+				for (int g = 0; g < c.length; g++) {
+					sum += a[i][g] * b[g][k];
+
+				}
+				c[i][k] = sum;
 			}
+
 		}
-		return mult;
+		return c;
 //		throw new UnsupportedOperationException("multipliser ikke implementert");
 
 	}
