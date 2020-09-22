@@ -87,19 +87,21 @@ public class Matriser {
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
 
-		int[][] c = new int[b.length][];
+		int[][] c = new int[a.length][];
 
-		for (int i = 0; i < b.length; i++) {
-			c[i] = new int[b[i].length];
-
-			for (int k = 0; k < c.length; k++) {
+		for (int i = 0; i < a.length; i++) {
+			//lager arrays			
+			c[i] = new int[a.length];
+			
+			//fører verdi inn i arrays
+			for (int k = 0; k < a.length; k++) {
 
 				int sum = 0;
 				
-				for (int g = 0; g < c.length; g++) {
-					sum += a[i][g] * b[g][k];
-
-				}
+				//beregner sum til verdi
+				for (int g = 0; g < b[i].length; g++) {
+					sum += a[i][g] * b[g][k];}
+				
 				c[i][k] = sum;
 			}
 
