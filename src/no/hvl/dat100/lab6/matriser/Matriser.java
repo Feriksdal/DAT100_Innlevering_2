@@ -69,17 +69,17 @@ public class Matriser {
 	// e)
 	public static int[][] speile(int[][] matrise) {
 
-		int[][] speil = new int[matrise.length][];
+		int[][] mir = new int[matrise.length][];
 
 		for (int i = 0; i < matrise.length; i++) {
-			speil[i] = new int[matrise[i].length];
+			mir[i] = new int[matrise[i].length];
 
 			for (int g = 0; g < matrise.length; g++) {
-				speil[i][g] = matrise[g][i];
+				mir[i][g] = matrise[g][i];
 			}
 
 		}
-		return speil;
+		return mir;
 //		throw new UnsupportedOperationException("speile ikke implementert");
 
 	}

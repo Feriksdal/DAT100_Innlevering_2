@@ -24,10 +24,8 @@ public class Tabeller {
 			}
 			utSkr += (tabell[tabell.length - 1]);
 		}
-
 		utSkr += "]";
 
-		System.out.println(utSkr);
 		return utSkr;
 
 //		throw new UnsupportedOperationException("tilStreng ikke implementert");
@@ -39,10 +37,8 @@ public class Tabeller {
 
 		int sum = 0;
 
-		for (int i = 0; i < tabell.length; i++) {
-
-			sum += tabell[i];
-
+		for (int val : tabell) {
+			sum += val;
 		}
 		return sum;
 //		throw new UnsupportedOperationException("summer ikke implementert");
@@ -50,30 +46,29 @@ public class Tabeller {
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-		boolean fins = false;
 
-		for (int i = 0; i < tabell.length; i++) {
-			if (tabell[i] == tall) {
-				fins = true;
+		for (int val : tabell) {
+			if (tall == val) {
+				return true;
 			}
 		}
-		return fins;
+		return false;
 //		throw new UnsupportedOperationException("finnesTall ikke implementert");
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
-		int pos = -1;
 
+//		int pos = -1;
 		for (int i = 0; i < tabell.length; i++) {
 			if (tall == tabell[i]) {
-				pos = i;
+				return i;
+				
 			}
 
 		}
-		return pos;
 //		throw new UnsupportedOperationException("posisjonTall ikke implementert");
-
+return -1;
 	}
 
 	// f)
@@ -113,8 +108,8 @@ public class Tabeller {
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
-		int[]saman = new int [tabell1.length + tabell2.length];
-		
+		int[] saman = new int[tabell1.length + tabell2.length];
+
 		for (int i = 0; i < tabell1.length; i++) {
 			saman[i] = tabell1[i];
 		}
@@ -122,7 +117,7 @@ public class Tabeller {
 			saman[tabell1.length + g] = tabell2[g];
 		}
 		return saman;
-		
+
 //		throw new UnsupportedOperationException("settSammen ikke implementert");
 	}
 }
