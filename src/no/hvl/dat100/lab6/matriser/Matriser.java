@@ -33,6 +33,7 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
+		
 		int[][] nymatr = new int[matrise.length][];
 
 		for (int i = 0; i < matrise.length; i++) {
@@ -53,16 +54,17 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		boolean lik = true;
-
+	
+		if (b.length != a.length) {return false;}
+		
 		for (int i = 0; i < b.length; i++) {
 			for (int g = 0; g < b.length; g++) {
 				if (a[i][g] != b[i][g]) {
-					return !lik;
+					return false;
 				}
 			}
 		}
-		return lik;
+		return true;
 //		throw new UnsupportedOperationException("erLik ikke implementert");
 	}
 
