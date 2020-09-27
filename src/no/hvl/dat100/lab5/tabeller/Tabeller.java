@@ -5,9 +5,9 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		System.out.print("Skrivut: (  ");
+		System.out.print("Skrivut: ( ");
 		for (int val : tabell) {
-			System.out.print(val + "  ");
+			System.out.print(val + " ");
 		}
 		System.out.println(")");
 //		throw new UnsupportedOperationException("skrivUt ikke implementert");
@@ -36,11 +36,24 @@ public class Tabeller {
 	public static int summer(int[] tabell) {
 
 		int sum = 0;
-
-		for (int val : tabell) {
-			sum += val;
+//
+//		for (int val : tabell) {
+//			sum += val;
+//		}
+		
+//		for (int i = 0; i < tabell.length; i++) {
+//			sum += tabell[i];
+//		}
+		int i = 0;
+		while (i  < tabell.length ) {
+			sum += tabell[i];
+			i++;
 		}
+		
+		
+		
 		return sum;
+		
 //		throw new UnsupportedOperationException("summer ikke implementert");
 	}
 
@@ -63,23 +76,23 @@ public class Tabeller {
 		for (int i = 0; i < tabell.length; i++) {
 			if (tall == tabell[i]) {
 				return i;
-				
+
 			}
 
 		}
 //		throw new UnsupportedOperationException("posisjonTall ikke implementert");
-return -1;
+		return -1;
 	}
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-		int[] rev = new int[tabell.length];
+		int[] tabRev = new int[tabell.length];
 
 		for (int i = 0; i < tabell.length; i++) {
-			rev[i] = tabell[tabell.length - 1 - i];
+			tabRev[i] = tabell[tabell.length - 1 - i];
 
 		}
-		return rev;
+		return tabRev;
 //		throw new UnsupportedOperationException("reverser ikke implementert");
 
 	}
