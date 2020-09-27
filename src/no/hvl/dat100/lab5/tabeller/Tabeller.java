@@ -44,6 +44,7 @@ public class Tabeller {
 //		for (int i = 0; i < tabell.length; i++) {
 //			sum += tabell[i];
 //		}
+		
 		int i = 0;
 		while (i  < tabell.length ) {
 			sum += tabell[i];
@@ -100,21 +101,14 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		boolean sorted = false;
-		// 0 5 8
-		// tab0 < tab1
-		if (tabell.length <= 1) {
-			sorted = true;
-			return sorted;
-		}
 		for (int i = 0; i < tabell.length - 1; i++) {
 
-			if (tabell[i] < (tabell[i + 1])) {
-				sorted = true;
+			if (tabell[i] > (tabell[i + 1])) {
+				return false;
 			}
 
 		}
-		return sorted;
+		return true;
 //		throw new UnsupportedOperationException("erSortert ikke implementert");
 	}
 
